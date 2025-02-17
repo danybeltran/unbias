@@ -9,12 +9,9 @@ export async function POST(request: Request) {
   const req = await promptText({
     prompt: `
 You are presented the contents of a news publication. Your task is to impartially find biases in it and respond with markdown with
-this title: "Sesgos en <i>${pageData.title}</i>"
+this h1 title: "${pageData.title}"
 Specify the bias name, what it consists of, where in the contents it's present, and why it is
-that specific bias.
-
-
-Do it in spanish
+that specific bias, everything in the same language the content is written in.
 
 TITLE: ${pageData.title}
 <-----------Content starts here-------------->
