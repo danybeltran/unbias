@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 
 import markdownit from "markdown-it"
+import Link from "next/link"
 const md = markdownit()
 
 const startStream = async ({
@@ -47,9 +48,18 @@ export default function Home() {
   return (
     <div className="p-4">
       <div className="print:hidden">
-        <h2 className="text-lg font-semibold text-center">
-          Encontrar sesgos en noticias
-        </h2>
+        <div className="py-4 text-center">
+          <h2 className="text-lg font-semibold text-center">
+            Encontrar sesgos en noticias
+          </h2>
+          <Link
+            className="underline text-blue-600"
+            href="https://github.com/danybeltran/unbias/"
+            target="_blank"
+          >
+            Ver código en Github
+          </Link>
+        </div>
 
         <div className="text-center">
           <input
