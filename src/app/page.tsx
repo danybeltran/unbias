@@ -37,6 +37,7 @@ export default function Home() {
   const [url, setUrl] = useState("")
 
   const startBiasCheck = () => {
+    setParts([])
     startStream({
       url,
       onChunkParse(chunk) {
