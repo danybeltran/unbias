@@ -8,10 +8,10 @@ export async function POST(request: Request) {
 
   const req = await promptText({
     prompt: `
-You are presented the contents of a news publication. Your task is to impartially find biases in it and respond with markdown with
+You are presented the contents of a news publication. Your task is to impartially find biases and fallacies in it and respond with markdown with
 this h1 title: "${pageData.title}"
-Specify the bias name, what it consists of, where in the contents it's present, and why it is
-that specific bias, everything in the same language the content is written in.
+Specify the bias/fallacy name, what it consists of, where in the contents it's present, and why it is
+that specific bias/fallacy, everything in the same language the content is written in.
 
 TITLE: ${pageData.title}
 <-----------Content starts here-------------->
